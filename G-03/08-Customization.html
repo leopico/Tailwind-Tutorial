@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&family=Caprasimo&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        sm: '576px',
+                        md: '750px',
+                    },
+                    fontFamily: {
+                        ok: ['Caprasimo', "cursive"],
+                    },
+                    colors: {
+                        'primary': '#007bff'
+                    },
+                    spacing: {
+                        '128': '32rem', //has property that taking spacing classes
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-pink-200 sm:bg-pink-400 md:bg-pink-600 lg:bg-pink-800 font-ok">
+    <h1 class="text-sm sm:text-lg mb-128"></h1>
+    <h2 class="text-primary">Colors</h2>
+</body>
+<script>
+    const screenWidth = () => {
+        const width = window.innerWidth;
+        document.querySelector('h1').innerHTML = `width ${width}-px`;
+    }
+
+    window.onload = screenWidth;
+    window.onresize = screenWidth;
+</script>
+</html>
