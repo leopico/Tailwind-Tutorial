@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!--in flex row justify and items-->
+    <div class="flex w-full bg-slate-100 h-72 items-center justify-around">
+        <div class="bg-pink-300 p-10 border border-pink-100">01</div>
+        <div class="bg-pink-300 p-10 border border-pink-100">02</div>
+        <div class="bg-pink-300 p-10 border border-pink-100">03</div>
+    </div>
+    <!--in flex col justify and items-->
+    <div class="flex flex-col w-full bg-slate-200 h-96 items-center justify-between">
+        <div class="bg-pink-300 p-10 border border-pink-100">01</div>
+        <div class="bg-pink-300 p-10 border border-pink-100">02</div>
+        <div class="bg-pink-300 p-10 border border-pink-100">03</div>
+    </div>
+    <!--with gap, order and justify and items-->
+    <div class="flex flex-wrap gap-8 w-full bg-slate-300 h-72 items-center justify-between">
+        <div class="bg-pink-300 p-10 border border-pink-100 order-4">01</div>
+        <div class="bg-pink-300 p-10 border border-pink-100">02</div>
+        <div class="bg-pink-300 p-10 border border-pink-100">03</div>
+        <div class="bg-pink-300 p-10 border border-pink-100">04</div>
+        <div class="bg-pink-300 p-10 border border-pink-100 order-2">05</div>
+        <div class="bg-pink-300 p-10 border border-pink-100 order-1">06</div>
+    </div>
+    <!-- grow and shrink -->
+    <div class="flex w-100 bg-slate-500">
+        <div class="w-64 flex-none bg-pink-300 p-10 border border-pink-100">01</div>
+        <div class="w-64 flex-initial bg-pink-300 p-10 border border-pink-100">02</div>
+        <div class="bg-pink-300 p-10 border border-pink-100">03</div>
+        <div class="bg-pink-300 p-10 border border-pink-100">04</div>
+        <div class="bg-pink-300 p-10 border border-pink-100">05</div>
+    </div>
+    <div class="flex bg-green-300">
+        <div class="flex-1 bg-pink-300 p-10 border border-pink-100">06</div>
+        <div class="flex-0 bg-pink-300 p-10 border border-pink-100">07</div>
+        <div class="flex-1 bg-pink-300 p-10 border border-pink-100">08</div>
+    </div>
+</body>
+</html>
